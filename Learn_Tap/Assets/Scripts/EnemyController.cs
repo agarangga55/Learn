@@ -26,10 +26,10 @@ public class EnemyController : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Debug.Log("Mouse Hovering");
+        //Debug.Log("Mouse Hovering");
         if (Input.GetMouseButton(0))
         {
-            Debug.Log("Destroyed");
+            //Debug.Log("Destroyed");
             Destroy(this.gameObject);
         }
     }
