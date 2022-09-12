@@ -6,17 +6,19 @@ public class EnemyController : MonoBehaviour
 {
     public int speed;
 
+    public Transform myTransform;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        myTransform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
-        
+        EndPoint();
     }
 
     private void Move()
@@ -31,6 +33,22 @@ public class EnemyController : MonoBehaviour
         {
             //Debug.Log("Destroyed");
             Destroy(this.gameObject);
+        }
+    }
+
+    private void EndPoint()
+    {
+        if (myTransform.position.x >= 9)
+        {
+            if (this.gameObject.tag == "Enemy")
+            {
+                Debug.Log("Enemy reached the point");
+            }
+            else
+            {
+                Debug.Log("NPC reached the point");
+            }
+            Destroy(gameObject);
         }
     }
 }

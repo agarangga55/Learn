@@ -15,6 +15,7 @@ public class GameplayController : MonoBehaviour
     void Start()
     {
         StartCoroutine(Spawner(spawnInterval, Enemy));
+        StartCoroutine(Spawner(4, NPC));
     }
 
     // Update is called once per frame
