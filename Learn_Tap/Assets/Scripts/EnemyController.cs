@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour
 
     public Transform myTransform;
 
+    public PlayerController Pcontroller;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,8 @@ public class EnemyController : MonoBehaviour
             if (this.gameObject.tag == "Enemy")
             {
                 Debug.Log("Enemy reached the point");
+                Pcontroller.ReduceHealth();
+                Debug.Log("Player Health =" + Pcontroller.playerHealth);
             }
             else
             {
@@ -50,5 +54,10 @@ public class EnemyController : MonoBehaviour
             }
             Destroy(gameObject);
         }
+    }
+
+    public void SetDependencies(PlayerController playerController)
+    {
+        Pcontroller = playerController;
     }
 }
