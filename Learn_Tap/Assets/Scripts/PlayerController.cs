@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public int playerHealth = 3;
+    public int playerScore;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerScore = 0;
     }
 
     // Update is called once per frame
@@ -34,5 +35,11 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0f;
             Debug.Log("Player Lose");
         }
+    }
+
+    public void AddScore()
+    {
+        playerScore += 1;
+        Debug.Log("Player Score + 1 , Player Score = " + playerScore);
     }
 }

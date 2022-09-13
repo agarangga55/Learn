@@ -36,6 +36,7 @@ public class EnemyController : MonoBehaviour
             if (gameObject.tag == "Enemy")
             {
                 Debug.Log("Enemy Destroyed");
+                Pcontroller.AddScore();
             }
             if (gameObject.tag == "NPC")
             {
@@ -60,6 +61,7 @@ public class EnemyController : MonoBehaviour
             else
             {
                 Debug.Log("NPC reached the point");
+                Pcontroller.AddScore();
             }
             Destroy(gameObject);
         }
