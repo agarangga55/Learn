@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
         playerHealth -= 1;
     }
 
+    public void InstantLose()
+    {
+        playerHealth = 0;
+    }
+
     public void GameOver()
     {
         if (playerHealth <= 0)

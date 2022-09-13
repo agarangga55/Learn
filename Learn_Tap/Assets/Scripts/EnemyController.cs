@@ -33,6 +33,15 @@ public class EnemyController : MonoBehaviour
         //Debug.Log("Mouse Hovering");
         if (Input.GetMouseButton(0))
         {
+            if (gameObject.tag == "Enemy")
+            {
+                Debug.Log("Enemy Destroyed");
+            }
+            if (gameObject.tag == "NPC")
+            {
+                Debug.Log("NPC Destroyed, You Lose");
+                Pcontroller.InstantLose();
+            }
             //Debug.Log("Destroyed");
             Destroy(this.gameObject);
         }
