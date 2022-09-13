@@ -7,7 +7,7 @@ public class GameplayController : MonoBehaviour
    // [SerializeField]
    // private GameObject Enemy;
     [SerializeField]
-    private GameObject NPC;
+    private EnemyController NPC;
     [SerializeField]
     private EnemyController enemy;
     [SerializeField]
@@ -19,6 +19,7 @@ public class GameplayController : MonoBehaviour
     void Start()
     {
         StartCoroutine(Spawner(spawnInterval, enemy));
+        StartCoroutine(Spawner(Random.Range(5,10), NPC));
     }
 
     // Update is called once per frame

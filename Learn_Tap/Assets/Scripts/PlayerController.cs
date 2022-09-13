@@ -14,11 +14,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GameOver();
     }
 
     public void ReduceHealth()
     {
         playerHealth -= 1;
+    }
+
+    public void GameOver()
+    {
+        if (playerHealth <= 0)
+        {
+            Time.timeScale = 0f;
+            Debug.Log("Player Lose");
+        }
     }
 }

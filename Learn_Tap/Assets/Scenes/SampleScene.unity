@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abed99de69854d542a869655cac89a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPC: {fileID: 5342037424548781210, guid: 247d6984eb489ed4eae0bd28148d300a, type: 3}
+  NPC: {fileID: 991100686952903388, guid: 247d6984eb489ed4eae0bd28148d300a, type: 3}
   enemy: {fileID: 1015479973230282002, guid: 34d9f3fa5a1c16b4abc003ab0b47c6e4, type: 3}
   pController: {fileID: 2097543006}
   spawnInterval: 2
