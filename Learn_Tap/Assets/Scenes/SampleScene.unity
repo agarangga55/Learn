@@ -835,7 +835,7 @@ MonoBehaviour:
     typeOfObjects:
     - {fileID: 1015479973230282015, guid: 34d9f3fa5a1c16b4abc003ab0b47c6e4, type: 3}
     - {fileID: 991100686952903378, guid: 247d6984eb489ed4eae0bd28148d300a, type: 3}
-    spawnInterval: 1
+    spawnInterval: 3
   spawnPoints:
   - {fileID: 277962451}
   - {fileID: 547710533}
@@ -843,6 +843,7 @@ MonoBehaviour:
   - {fileID: 1619293028}
   - {fileID: 524679211}
   ongoingWaveNumber: 0
+  waveNumberDisplay: 0
 --- !u!1 &1453658717
 GameObject:
   m_ObjectHideFlags: 0

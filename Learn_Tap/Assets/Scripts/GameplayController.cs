@@ -30,6 +30,6 @@ public class GameplayController : MonoBehaviour
     {
         lifeRemain.text = "Life Remainining = " + pController.playerHealth.ToString();
         score.text = "Score = " + pController.playerScore.ToString();
-        waveNum.text = "Wave : " + waveController.ongoingWaveNumber.ToString();
+        waveNum.text = "Wave : " + waveController.waveNumberDisplay.ToString();
     }
 }

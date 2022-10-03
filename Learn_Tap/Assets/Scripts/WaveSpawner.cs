@@ -20,6 +20,7 @@ public class WaveSpawner : MonoBehaviour
 
     private Wave ongoingWave;
     public int ongoingWaveNumber;
+    public int waveNumberDisplay;
 
     private float nextSpawnTime;
 
@@ -34,6 +35,7 @@ public class WaveSpawner : MonoBehaviour
     private void Update()
     {
         ongoingWave = waves[ongoingWaveNumber];
+        waveNumberDisplay = ongoingWaveNumber + 1;
         WaveSpawn();
         GameObject[] totalObjects = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] totalNPC = GameObject.FindGameObjectsWithTag("NPC");
@@ -41,6 +43,10 @@ public class WaveSpawner : MonoBehaviour
         {
             ongoingWaveNumber++;
             isSpawning = true;
+        }
+        else
+        {
+            Debug.Log("You Win");
         }
     }
 
